@@ -1,10 +1,7 @@
 <script>
-export default {
-    
-}
 </script>
 
-<template lang="">
+<template>
     <header>
         <div class="container">
 
@@ -76,12 +73,9 @@ header{
         }
     
         ul{
-            list-style-type: none;
-    
             li {
                 
                 a {
-                    text-decoration: none;
                     color: black;
                     font-size: 10pt;
                     margin: 0 15px 0 15px;

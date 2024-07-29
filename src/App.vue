@@ -1,13 +1,13 @@
 <script >
 import AppHeader from './components/AppHeader.vue';
 import AppContent from './components/AppContent.vue';
-import AppSections from './components/AppSections.vue';
+import AppInnerMenu from './components/AppInnerMenu.vue';
 
 export default {
   components: {
     AppHeader,
     AppContent,
-    AppSections,
+    AppInnerMenu,
   }
 }
 </script>
@@ -16,7 +16,7 @@ export default {
   <div>
     <AppHeader />
     <AppContent />
-    <AppSections />
+    <AppInnerMenu />
   </div>
 </template>
 
