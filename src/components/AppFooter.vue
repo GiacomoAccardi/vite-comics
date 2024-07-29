@@ -66,6 +66,25 @@ export default {
     
             </div>
         </div>
+
+        <div class="foot-down"> 
+            <div class="container"> 
+                <div class="content d-flex align-items-center justify-content-between"> 
+                    
+                    <button>SING-UP NOW!</button>
+
+                    <div class="logos-box d-flex align-items-center">
+                        <span>FOLLOW US</span>
+                        <img src="../assets/img/footer-facebook.png" />
+                        <img src="../assets/img/footer-periscope.png" />
+                        <img src="../assets/img/footer-pinterest.png" />
+                        <img src="../assets/img/footer-twitter.png" />
+                        <img src="../assets/img/footer-youtube.png" />
+                    </div>
+
+                </div>
+            </div>
+        </div>
     </footer>
 </template>
 
@@ -85,6 +104,7 @@ export default {
                 img{
                    position: absolute;
                    top:-50px;
+                   margin-left: 250px;
                 }
             }
 
@@ -104,7 +124,35 @@ export default {
             }
         }
 
+        .foot-down{
+            position: relative;
+            z-index: 2;
+            background-color: rgb(44, 44, 44);
+            height: 109px;
 
+            .content{
+                padding: 30px 0 30px 0;
+
+                button{
+                    color: white;
+                    padding: 10px;
+                    background-color: rgb(44, 44, 44) ;
+                    border: 2px solid rgb(20, 122, 255);
+                }
+
+                .logos-box{
+                    span{
+                        color: rgb(20, 122, 255);
+                        font-weight: bolder;
+                        margin-right: 20px;
+                    }
+
+                    img{
+                        margin-right: 20px;
+                    }
+                }
+            }
+        }
 
     }
 </style>
