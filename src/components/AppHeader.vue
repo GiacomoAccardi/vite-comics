@@ -1,4 +1,62 @@
 <script>
+export default {
+    data (){
+        return{
+            links: [
+                {
+                    label: 'CHARACTERS',
+                    url: '#',
+                    current: false,
+                },
+                {
+                    label: 'COMICS',
+                    url: '#',
+                    current: false,
+                },
+                {
+                    label: 'MOVIES',
+                    url: '#',
+                    current: false,
+                },
+                {
+                    label: 'TV',
+                    url: '#',
+                    current: true,
+                },
+                {
+                    label: 'GAMES',
+                    url: '#',
+                    current: false,
+                },
+                {
+                    label: 'COLLECTABLES',
+                    url: '#',
+                    current: false,
+                },
+                {
+                    label: 'VIDEOS',
+                    url: '#',
+                    current: false,
+                },
+                {
+                    label: 'FANS',
+                    url: '#',
+                    current: false,
+                },
+                {
+                    label: 'NEWS',
+                    url: '#',
+                    current: false,
+                },
+                {
+                    label: 'SHOP',
+                    url: '#',
+                    current: false,
+                },
+            ]
+        }
+    }
+}
 </script>
 
 <template>
@@ -12,44 +70,8 @@
 
                 <!--Container menù-->
                 <ul class="d-flex justify-content-evenly"> 
-                    <li>
-                        <a href="#"> CHARACTERS </a>
-                    </li>
-
-                    <li>
-                        <a href="#"> COMICS </a>
-                    </li>
-
-                    <li>
-                        <a href="#"> MOVIES </a>
-                    </li>
-
-                    <li>
-                        <a href="#"> TV </a>
-                    </li>
-
-                    <li>
-                        <a href="#"> GAMES </a>
-                    </li>
-
-                    <li>
-                        <a href="#"> COLLECTABLES </a>
-                    </li>
-
-                    <li>
-                        <a href="#"> VIDEOS </a>
-                    </li>
-
-                    <li>
-                        <a href="#"> FANS </a>
-                    </li>
-
-                    <li>
-                        <a href="#"> NEWS </a>
-                    </li>
-
-                    <li>
-                        <a href="#"> SHOP </a>
+                    <li v-for="link, index in links" :key="index" :class="link.current ? 'active' : '' ">
+                        <a :href="link.url">{{ link.label }}</a>
                     </li>
                 </ul>
 
@@ -74,21 +96,23 @@ header{
     
         ul{
             li {
-                
+
                 a {
                     color: black;
                     font-size: 10pt;
                     margin: 0 15px 0 15px;
+
                 }
     
                 
-                &:hover {
-                    color: rgb(20, 122, 255);
-                    border-bottom: 5px solid rgb(20, 122, 255) ;
-                }
             }
         }
     
+    }
+
+    .active {
+        color: rgb(20, 122, 255);
+        border-bottom: 5px solid rgb(20, 122, 255) ;
     }
 }
 
