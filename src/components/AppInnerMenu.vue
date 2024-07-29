@@ -5,7 +5,7 @@ export default {
 </script>
 
 <template>
-    <div>
+    <div class="wrapper">
         <div class="bg-primary">
             <div class="container">
                 <div class="content d-flex justify-content-between">
@@ -52,6 +52,10 @@ export default {
 </template>
 
 <style scoped>
+    .wrapper{
+        position: relative;
+        z-index: 1;
+    }
     .content{
         padding: 40px 20px 40px 20px;
 
