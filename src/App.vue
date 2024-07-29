@@ -10,6 +10,7 @@ export default {
 
 <template>
   <div>
+    <AppHeader />
   </div>
 </template>
 
