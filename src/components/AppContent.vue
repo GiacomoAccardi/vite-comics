@@ -1,4 +1,12 @@
 <script>
+import { products } from '../data/products';
+export default {
+    data() {
+        return {
+            products,
+        }
+    }
+}
 </script>
 
 <template>

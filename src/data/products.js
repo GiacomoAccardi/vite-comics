@@ -72,3 +72,5 @@ const products = [
         "type": "graphic novel"
     }
 ]
+
+export { products }
