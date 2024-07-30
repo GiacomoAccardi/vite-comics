@@ -6,31 +6,37 @@ export default {
                 {
                     label: 'DIGITAL COMICS',
                     image: '../assets/img/buy-comics-digital-comics.png',
-                    current: false,
+                    href: '#',
                 },
                 {
                     label: 'DC MERCHANDISE',
                     image: '../assets/img/buy-comics-merchandise.png',
-                    current: false,
+                    href: '#',
                 },
                 {
                     label: 'SUBSCRIPTION',
                     image: '../assets/img/buy-comics-subscriptions.png',
-                    current: false,
+                    href: '#',
                 },
                 {
                     label: 'COMIC SHOP LOCATOR',
                     image: '../assets/img/buy-comics-shop-locator.png',
-                    current: false,
+                    href: '#',
                 },
                 {
                     label: 'DC POWER VISA',
                     image: '../assets/img/buy-dc-power-visa.svg',
-                    current: false,
+                    href: '#',
                 },
             ]
         }
-    }
+    },
+    methods: {
+        buildingImagePath(imageName) {
+            const imageURL = new URL( imageName, import.meta.url);
+            return imageURL.href;
+        }
+    },
 }
 </script>
 
@@ -41,14 +47,15 @@ export default {
                 <div class="content d-flex justify-content-between">
 
                     <div
+                    
                       class="d-flex align-items-center"
                       v-for="(card, index) in cards"
                       :key="index">
 
                         <div>
-                            <img :src="card.image" />
+                            <img :src="buildingImagePath(card.image)" />
                         </div>
-                        <a href="#">{{card.label}}</a>
+                        <a :href="card.href">{{card.label}}</a>
                         
                     </div>
 
