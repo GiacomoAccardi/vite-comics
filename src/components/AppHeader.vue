@@ -70,9 +70,17 @@ export default {
 
                 <!--Container menù-->
                 <ul class="d-flex justify-content-evenly"> 
-                    <li v-for="link, index in links" :key="index" :class="link.current ? 'active' : '' ">
-                        <a :href="link.url">{{ link.label }}</a>
+
+                    <li
+                      class="d-flex align-items-center"
+                      v-for="link, index in links"
+                      :key="index"
+                      :class="link.current ? 'active' : '' ">
+
+                        <a :href="link.url"> {{ link.label }} </a>
+
                     </li>
+
                 </ul>
 
 
@@ -96,7 +104,7 @@ header{
     
         ul{
             li {
-
+                height: 75px;
                 a {
                     color: black;
                     font-size: 10pt;

@@ -1,6 +1,36 @@
 <script>
 export default {
-    
+    data (){
+        return{
+            cards: [
+                {
+                    label: 'DIGITAL COMICS',
+                    image: '../assets/img/buy-comics-digital-comics.png',
+                    current: false,
+                },
+                {
+                    label: 'DC MERCHANDISE',
+                    image: '../assets/img/buy-comics-merchandise.png',
+                    current: false,
+                },
+                {
+                    label: 'SUBSCRIPTION',
+                    image: '../assets/img/buy-comics-subscriptions.png',
+                    current: false,
+                },
+                {
+                    label: 'COMIC SHOP LOCATOR',
+                    image: '../assets/img/buy-comics-shop-locator.png',
+                    current: false,
+                },
+                {
+                    label: 'DC POWER VISA',
+                    image: '../assets/img/buy-dc-power-visa.svg',
+                    current: false,
+                },
+            ]
+        }
+    }
 }
 </script>
 
@@ -10,39 +40,16 @@ export default {
             <div class="container">
                 <div class="content d-flex justify-content-between">
 
-                    <div class="inner-content d-flex align-items-center">
-                        <div>
-                            <img src="../assets/img/buy-comics-digital-comics.png" alt="img"/>
-                        </div>
-                        <a href="#">DIGITAL COMICS</a>
-                    </div>
+                    <div
+                      class="d-flex align-items-center"
+                      v-for="(card, index) in cards"
+                      :key="index">
 
-                    <div class="inner-content d-flex align-items-center">
                         <div>
-                            <img src="../assets/img/buy-comics-merchandise.png" alt="img"/>
+                            <img :src="card.image" />
                         </div>
-                        <a href="#">DC MERCHANDISE</a>
-                    </div>
-
-                    <div class="inner-content d-flex align-items-center">
-                        <div>
-                            <img src="../assets/img/buy-comics-subscriptions.png" alt="img"/>
-                        </div>
-                        <a href="#">SUBSCRIPTION</a>
-                    </div>
-
-                    <div class="inner-content d-flex align-items-center">
-                        <div>
-                            <img src="../assets/img/buy-comics-shop-locator.png" alt="img"/>
-                        </div>
-                        <a href="#">COMIC SHOP LOCATOR</a>
-                    </div>
-
-                    <div class="inner-content d-flex align-items-center">
-                        <div>
-                            <img src="../assets/img/buy-dc-power-visa.svg" alt="img"/>
-                        </div>
-                        <a href="#">DC POWER VISA</a>
+                        <a href="#">{{card.label}}</a>
+                        
                     </div>
 
                 </div>

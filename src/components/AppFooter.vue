@@ -57,11 +57,6 @@ export default {
                             </ul>
                         </div>
                     </div>
-                    <div class="column-50">
-                        <div class="bg-logo">
-                            <img src="../assets/img/dc-logo-bg.png" />
-                        </div>
-                    </div>
                 </div>
     
             </div>
@@ -91,22 +86,15 @@ export default {
 <style scoped>
     footer{
 
-        .foot-up{
-            background-image: url(../assets/img/footer-bg.jpg);
+        background-image: url(../assets/img/footer-bg.jpg);
             background-repeat: no-repeat;
             background-size: cover;
+
+        .foot-up{
             height: 450px;
-
-            .bg-logo{
-                position: relative;
-
-
-                img{
-                   position: absolute;
-                   top:-50px;
-                   margin-left: 250px;
-                }
-            }
+            background-image: url(../assets/img/dc-logo-bg.png);
+            background-repeat: no-repeat;
+            background-position: 80%;
 
             .list-container{
                 margin: 50px 40px 0 0;
@@ -125,8 +113,6 @@ export default {
         }
 
         .foot-down{
-            position: relative;
-            z-index: 2;
             background-color: rgb(44, 44, 44);
             height: 109px;
 
